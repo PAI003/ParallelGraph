@@ -1,0 +1,16 @@
+cd ../src/.. && checkpatch.pl -f src/*.c
+/bin/sh: 1: checkpatch.pl: not found
+Makefile:16: recipe for target 'lint' failed
+make: [lint] Error 127 (ignored)
+cd ../src/.. && cpplint --recursive src/
+/bin/sh: 1: cpplint: not found
+Makefile:16: recipe for target 'lint' failed
+make: [lint] Error 127 (ignored)
+cd ../src/.. && shellcheck tests/*.sh
+/bin/sh: 1: shellcheck: not found
+Makefile:16: recipe for target 'lint' failed
+make: [lint] Error 127 (ignored)
+cd ../src/.. && pylint tests/*.py
+/bin/sh: 1: pylint: not found
+Makefile:16: recipe for target 'lint' failed
+make: [lint] Error 127 (ignored)
